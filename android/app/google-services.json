@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "397431061238",
+    "project_id": "kalistenika-2-93",
+    "storage_bucket": "kalistenika-2-93.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:397431061238:android:76d73e40e9f1a7f4698ad7",
+        "android_client_info": {
+          "package_name": "com.szymonmatecki.kalistenika_2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "397431061238-85na5hjhnn0nh1ndoadps0fn7l43o56k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTVV50OXyUUqXBP8aNhJfLL9fGBB1AJEs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "397431061238-85na5hjhnn0nh1ndoadps0fn7l43o56k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

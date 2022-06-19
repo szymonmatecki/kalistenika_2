@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.kalistenika_2">
+    package="com.szymonmatecki.kalistenika_2">
    <application
         android:label="kalistenika_2"
         android:name="${applicationName}"

@@ -1,4 +1,4 @@
-package com.example.kalistenika_2
+package com.szymonmatecki.kalistenika_2
 
 import io.flutter.embedding.android.FlutterActivity
 
