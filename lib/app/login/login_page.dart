@@ -6,8 +6,8 @@ class LoginPage extends StatefulWidget {
     Key? key,
   }) : super(key: key);
 
-  final emailControler = TextEditingController();
-  final passwordControler = TextEditingController();
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -22,35 +22,35 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.all(30.0),
+          padding: const EdgeInsets.all(20.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              const SizedBox(height: 20),
               Text(isCreatingAccount == true
                   ? 'Zarejestruj się'
                   : 'Zaloguj się'),
-              const SizedBox(height: 25),
               TextField(
-                controller: widget.emailControler,
+                controller: widget.emailController,
                 decoration: const InputDecoration(hintText: 'E-mail'),
               ),
               TextField(
-                controller: widget.passwordControler,
-                obscureText: true,
+                controller: widget.passwordController,
                 decoration: const InputDecoration(hintText: 'Hasło'),
+                obscureText: true,
               ),
-              const SizedBox(height: 25),
+              const SizedBox(height: 20),
               Text(errorMessage),
-              const SizedBox(height: 25),
+              const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () async {
-                  if (isCreatingAccount = true) {
+                  if (isCreatingAccount == true) {
                     // rejestracja
                     try {
                       await FirebaseAuth.instance
                           .createUserWithEmailAndPassword(
-                        email: widget.emailControler.text,
-                        password: widget.passwordControler.text,
+                        email: widget.emailController.text,
+                        password: widget.passwordController.text,
                       );
                     } catch (error) {
                       setState(() {
@@ -61,8 +61,8 @@ class _LoginPageState extends State<LoginPage> {
                     // logowanie
                     try {
                       await FirebaseAuth.instance.signInWithEmailAndPassword(
-                        email: widget.emailControler.text,
-                        password: widget.passwordControler.text,
+                        email: widget.emailController.text,
+                        password: widget.passwordController.text,
                       );
                     } catch (error) {
                       setState(() {
@@ -75,7 +75,7 @@ class _LoginPageState extends State<LoginPage> {
                     ? 'Zarejestruj się'
                     : 'Zaloguj się'),
               ),
-              const SizedBox(height: 25),
+              const SizedBox(height: 20),
               if (isCreatingAccount == false) ...[
                 TextButton(
                   onPressed: () {
