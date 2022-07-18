@@ -13,6 +13,8 @@ class AddTrainingPageContent extends StatefulWidget {
 class _AddTrainingPageContentState extends State<AddTrainingPageContent> {
   var workoutsName = '';
   var trainingName = '';
+  var repeat = 8.0;
+  var series = 4.0;
 
   @override
   Widget build(BuildContext context) {
@@ -39,6 +41,34 @@ class _AddTrainingPageContentState extends State<AddTrainingPageContent> {
             });
           },
         ),
+        const SizedBox(height: 25),
+        const Text('Powtórzenia'),
+        Slider(
+          onChanged: (newValue) {
+            setState(() {
+              repeat = newValue;
+            });
+          },
+          value: repeat,
+          min: 1.0,
+          max: 10.0,
+          divisions: 10,
+          label: repeat.toString(),
+        ),
+        const SizedBox(height: 20),
+        const Text('Serie'),
+        Slider(
+          onChanged: (newValue) {
+            setState(() {
+              series = newValue;
+            });
+          },
+          value: series,
+          min: 1.0,
+          max: 15.0,
+          divisions: 15,
+          label: repeat.toString(),
+        ),
         const SizedBox(
           height: 20,
         ),
@@ -47,8 +77,8 @@ class _AddTrainingPageContentState extends State<AddTrainingPageContent> {
             FirebaseFirestore.instance.collection('workouts').add({
               'name': workoutsName,
               'training': trainingName,
-              'repeat': 8,
-              'series': 4,
+              'repeat': repeat,
+              'series': series,
             });
           },
           child: const Text('Dodaj'),
