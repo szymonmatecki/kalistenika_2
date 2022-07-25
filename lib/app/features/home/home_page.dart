@@ -1,8 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:kalistenika_2/app/home/add_training/add_training_page_content.dart';
-import 'package:kalistenika_2/app/home/my_account/my_account_page_content.dart';
-import 'package:kalistenika_2/app/home/workouts/workouts_page_content.dart';
+import 'package:kalistenika_2/app/features/home/add_training/add_training_page_content.dart';
+import 'package:kalistenika_2/app/features/home/my_account/my_account_page_content.dart';
+import 'package:kalistenika_2/app/features/home/workouts/workouts_page_content.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({

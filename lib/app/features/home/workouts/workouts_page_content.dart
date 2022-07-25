@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:kalistenika_2/app/home/workouts/cubit/workouts_cubit.dart';
+import 'package:kalistenika_2/app/features/home/workouts/cubit/workouts_cubit.dart';
 
 class WorkoutsPageContent extends StatelessWidget {
   const WorkoutsPageContent({
