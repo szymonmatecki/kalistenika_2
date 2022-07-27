@@ -42,7 +42,7 @@ class WorkoutsCubit extends Cubit<WorkoutsState> {
       ..onError((error) {
         emit(
           WorkoutsState(
-            documents: [],
+            documents: const [],
             errorMessage: error.toString(),
             isLoading: false,
           ),

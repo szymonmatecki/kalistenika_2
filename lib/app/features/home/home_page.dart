@@ -27,10 +27,10 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Builder(builder: (context) {
         if (currentIndex == 0) {
-          return WorkoutsPageContent();
+          return const WorkoutsPageContent();
         }
         if (currentIndex == 1) {
-          return AddTrainingPageContent();
+          return const AddTrainingPageContent();
         }
         return MyAccountPageContent(email: widget.user.email);
       }),
